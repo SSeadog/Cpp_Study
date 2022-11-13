@@ -36,4 +36,4 @@ int main(void)
     cout << b.GetData() << endl;
 
     return 0;
-}0
+}
