@@ -34,3 +34,10 @@
 .vs/
 .bin/
 .obj/
+
+*.tlog
+*.idb
+*.pdb
+*.ilk
+*.db
+*.recipe
