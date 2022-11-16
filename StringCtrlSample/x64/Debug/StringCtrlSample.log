@@ -1,2 +1,7 @@
-﻿  CMyStringEx.cpp
-  StringCtrlSample.vcxproj -> C:\Users\aasss\source\repos\Cpp_Study\x64\Debug\StringCtrlSample.exe
+﻿  CMyString.cpp
+C:\Users\Seadog\source\repos\SSeadog\Cpp_Study\StringCtrlSample\CMyString.cpp(117,32): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Seadog\source\repos\SSeadog\Cpp_Study\StringCtrlSample\CMyString.cpp(148,34): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CMyStringEx.cpp
+C:\Users\Seadog\source\repos\SSeadog\Cpp_Study\StringCtrlSample\CMyStringEx.cpp(8,12): warning C4244: '초기화 중': '__int64'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  StringCtrlSample.cpp
+  StringCtrlSample.vcxproj -> C:\Users\Seadog\Source\Repos\SSeadog\Cpp_Study\x64\Debug\StringCtrlSample.exe

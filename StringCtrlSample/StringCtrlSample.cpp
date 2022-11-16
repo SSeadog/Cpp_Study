@@ -6,12 +6,10 @@
 
 int main()
 {
-    CMyStringEx strTest;
-    strTest.SetString("I am a boy.");
-    cout << strTest << endl;
+    CMyString b("World"), c;
 
-    int nIndex = strTest.Find("am");
-    cout << "Index: " << nIndex << endl;
+    c = "Hello" + b;
+    cout << c << endl;
 
     return 0;
 }

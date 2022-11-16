@@ -92,6 +92,10 @@ int CMyString::operator!=(const CMyString& rhs)
 	return 1;
 }
 
+void CMyString::OnSetString(char* pszData, int nLength)
+{
+}
+
 CMyString::operator char* ()
 {
 	return m_pszData;
@@ -118,6 +122,8 @@ int CMyString::SetString(const char* pszParam)
 	m_pszData = new char[nLength + 1];
 	strcpy_s(m_pszData, sizeof(char) * (nLength + 1), pszParam);
 	m_nLength = nLength;
+
+	OnSetString(m_pszData, m_nLength);
 
 	return nLength;
 }
@@ -175,4 +181,13 @@ void CMyString::Release()
 
 	m_pszData = NULL;
 	m_nLength = 0;
+}
+
+
+CMyString operator+(const char* pszParam, const CMyString& strParam)
+{
+	CMyString strResult(pszParam);
+	strResult.Append(strParam.m_pszData);
+
+	return strResult;
 }

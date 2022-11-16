@@ -1,39 +1,40 @@
 #include <iostream>
+#include <memory>
 using namespace std;
 
-class CMyData
+class CTest
 {
 public:
-    int GetData() { return m_nData; }
+    CTest(int nSize)
+    {
+        m_pszData = new char[nSize];
+    }
 
-    void SetData(int nParam) { m_nData = nParam; }
+    ~CTest()
+    {
+        delete[] m_pszData;
+        cout << "정상적으로 객체가 소멸함" << endl;
+    }
 
 private:
-    int m_nData = 0;
+    char* m_pszData;
 };
 
-class CMyDataEx : public CMyData
+int main()
 {
-public:
-    void SetData(int nParam)
+    try
     {
-        if (nParam < 0)
-            SetData(0);
-
-        if (nParam > 10)
-            SetData(10);
+        int nSize;
+        cout << "Input size: ";
+        
+        cin >> nSize;
+        CTest a(nSize);
     }
-};
-
-int main(void)
-{
-    CMyData a;
-    a.SetData(-10);
-    cout << a.GetData() << endl;
-
-    CMyDataEx b;
-    b.SetData(15);
-    cout << b.GetData() << endl;
-
+    catch (bad_alloc& exp)
+    {
+        cout << exp.what() << endl;
+        cout << "ERROR: CTest()" << endl;
+    }
+    
     return 0;
 }

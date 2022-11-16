@@ -5,5 +5,6 @@ class CMyStringEx :
 {
 public:
     int Find(const char* pszParam);
+    void OnSetString(char* pszData, int nLength); 
 };
 
